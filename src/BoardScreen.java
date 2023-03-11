@@ -11,11 +11,14 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+/**
+ *
+ * @author Eduardo Martínez
+ * 
+ */
 public class BoardScreen extends JPanel {
 
-    /**
-     *
-     */
+  
     int player = 0;
     BoardDrawing bd;
     JPanel stats;
@@ -51,6 +54,11 @@ public class BoardScreen extends JPanel {
         maxPlayers = m;
     }
 
+    /**
+     * Método returnMaxPlayers
+     *
+     * @return
+     */
     public int returnMaxPlayers() {
         return maxPlayers;
     }
@@ -75,6 +83,11 @@ public class BoardScreen extends JPanel {
 
     }
 
+    /**
+     * Método BoardScreen
+     *
+     * @param mw
+     */
     public BoardScreen(MainWindow mw) {
         this.mw = mw;
 
@@ -135,6 +148,11 @@ public class BoardScreen extends JPanel {
         //may need more functions inside to communicate for this reason
         roll = new JButton("Roll the die!");
         roll.addActionListener(new ActionListener() {
+            /**
+             * Método actionPerformed
+             * @param a int 
+             * @param die Random
+             */
             public void actionPerformed(ActionEvent e) {
                 Random die = new Random();
                 int a = die.nextInt(6) + 1;
